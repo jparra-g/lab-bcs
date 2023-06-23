@@ -1,11 +1,11 @@
-# microservices-lab
-Laboratorio de microservicios
+Integrantes del Grupo:
+- Pamela Latoja
+- Rodrigo Henriquez
+- Pablo Saavedra
+- Javier Parra
 
-## Instrucciones
+Consideraciones: 
 
-Ingresar a la carpeta __01-kubernetes__ y ejecutar scripts `00-create-cluster.sh` y `01-create-backend.sh`
-```shell
-cd 01-kubernetes
-./00-create-cluster.sh
-./01-create-backend.sh
-```
+- Hay archivos build.sh en los proyectos custody-service y frontend-api para generar los docker
+- En 01-kubernetes se agregan los yaml para generar los deployments y services
+- Si se usa la configuración actual los endpoints son los siguientes para hacer la prueba con Port Forwarding sobre el servicio de frontend
