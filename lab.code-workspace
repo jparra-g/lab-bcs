@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+			"path": "."
+		},
+        {
+            "path": "02-servicios-backend/billing-service"
+        },
+        {
+            "path": "02-servicios-backend/custody-service"
+        },
+        {
+            "path": "orm-go"
+        }
+    ]
+}

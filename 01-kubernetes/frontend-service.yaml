@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  frontend
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custody-frontend
+  labels:
+    tipo: frontend_comun
+    app: custody-frontend
+  namespace: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      tipo: frontend_comun
+      app: custody-frontend
+  template:
+    metadata:
+      labels:
+        tipo: frontend_comun
+        app: custody-frontend
+    spec:
+      containers:
+        - name: frontend-api
+          image: frontend-api:latest
+          imagePullPolicy: Never
+          env:
+          - name: CUSTODY_BACKEND
+            value: "custody-backend.backend:5000"
+          - name: PORT
+            value: "8080"
+          resources:
+            requests:
+              memory: "80Mi"
+              cpu: "250m"
+            limits:
+              memory: "300Mi"
+              cpu: "700m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: custody-frontend
+  namespace: frontend
+  labels:
+    tipo: frontend_comun
+    app: custody-frontend
+spec:
+  ports:
+    - name: custody
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    tipo: frontend_comun
+    app: custody-frontend
+  type: ClusterIP
