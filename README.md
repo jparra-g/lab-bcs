@@ -23,7 +23,7 @@ Endpoint Crear Custodia: http://localhost:8080/custody/create
 }
 
 
-Endpoint Obtener Custodias:
+Endpoint Obtener Custodias: http://localhost:8080/custody/getCustody
 
 {
     "period":   "2023-02",
