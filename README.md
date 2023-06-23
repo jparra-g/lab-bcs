@@ -13,7 +13,7 @@ Consideraciones:
 - Se corrige el DOCKERFILE con errores
 - Si se usa la configuración actual los endpoints son los siguientes para hacer la prueba con Port Forwarding sobre el servicio de frontend
 
-Endpoint Crear Custodia: http://localhost:8080/custody/create
+Endpoint Crear Custodia (POST): http://localhost:8080/custody/create
 
 {
     "period":   "2023-02",
@@ -23,7 +23,7 @@ Endpoint Crear Custodia: http://localhost:8080/custody/create
 }
 
 
-Endpoint Obtener Custodias: http://localhost:8080/custody/getCustody
+Endpoint Obtener Custodias (POST): http://localhost:8080/custody/getCustody
 
 {
     "period":   "2023-02",
