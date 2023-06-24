@@ -102,7 +102,7 @@ func (c *CustodyServiceController) GetCustody(ctx context.Context, msg *pb.Custo
 	// instancio ORM para trabajar con Custody
 	orm := dao.DB.Model(&model.Custody{})
 
-	// Arreglo de punteros a registros de tabla "Invoice"
+	// Arreglo de punteros a registros de tabla "Custody"
 	custodies := []*model.Custody{}
 
 	// Creamos el filtro de búsqueda usando los campos del mismo modelo
