@@ -6,7 +6,7 @@ Integrantes del Grupo:
 
 Consideraciones: 
 
-- Hay archivos build.sh en los proyectos custody-service y frontend-api para generar los docker
+- Hay archivos build.sh en los proyectos custody-service y frontend-api para generar los docker.
 - En 01-kubernetes se agregan los yaml para generar los deployments y services
 - Se crea un frontend-api para poder probar la correcta implementación
 - Las validaciones se realizan solo en el backend, para mostrar la correcta implementación en GO
