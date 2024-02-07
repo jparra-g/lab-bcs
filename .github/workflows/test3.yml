@@ -2,7 +2,7 @@ name: Platform CI
 
 on:
   release:
-    types: [created]
+    types: [released]
 
 permissions:
   id-token: write
@@ -20,4 +20,4 @@ jobs:
       - name: test push
         id: build-image
         run: |
-           echo "ok publish release"
+           echo "ok publish release ${{ steps.release.outputs.tag }}"
