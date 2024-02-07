@@ -3,7 +3,7 @@ name: Platform CI
 on:
   push:
     branches:
-    - main
+    - test
 
 permissions:
   id-token: write
@@ -15,5 +15,8 @@ jobs:
 
     steps:
     
-      run: |
-          echo "ok push main"
+      steps:
+      - name: test push
+        id: build-image
+        run: |
+           echo "ok push test"
