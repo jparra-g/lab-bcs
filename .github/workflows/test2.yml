@@ -14,8 +14,6 @@ jobs:
     name: Deploy
 
     steps:
-    
-      steps:
       - name: test push
         id: build-image
         run: |
