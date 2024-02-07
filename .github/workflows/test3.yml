@@ -20,6 +20,4 @@ jobs:
       - name: test push
         id: build-image
         run: |
-           echo "ok publish release ${{ steps.release.outputs.tag }}"
-           echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
-           echo "Tag name from github.ref_name: ${{  github.ref_name }}"
+           echo "publish release $GITHUB_REF_NAME"
