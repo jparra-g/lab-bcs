@@ -12,7 +12,11 @@ permissions:
 jobs:
   deploy:
     name: Deploy
-
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+        
     steps:
       - name: test push
         id: build-image
